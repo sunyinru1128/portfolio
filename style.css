@@ -1,6 +1,7 @@
 /* Base Styles */
 :root {
-    --bg-color: #f5f5f7; /* Slightly warmer light gray based on visual match */
+    --bg-color: #f5f5f7;
+    /* Slightly warmer light gray based on visual match */
     --text-primary: #000000;
     --text-secondary: #4a4a4a;
     --accent-color: #3B71FE;
@@ -169,7 +170,8 @@ body {
 .info-section {
     margin-bottom: var(--gap-l);
     max-width: 800px;
-    margin-left: 100px; /* Slight indent roughly matching the design alignment */
+    margin-left: 100px;
+    /* Slight indent roughly matching the design alignment */
 }
 
 .section-title {
@@ -210,12 +212,157 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* Homepage Hero */
+.homepage-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.home-hero {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: var(--gap-xl);
+}
+
+.hero-avatar img {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.hero-desc {
+    font-size: 20px;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 10px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: var(--gap-xl);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 24px;
+    padding: 80px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    min-height: 400px;
+}
+
+.project-card.half-width {
+    min-height: 380px;
+    padding: 50px;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.card-tag {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    align-self: flex-start;
+}
+
+.project-card h2 {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.project-card p {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.half-width-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+/* Gradients for cards */
+.card-vmwarecc {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+.card-expense {
+    background: linear-gradient(135deg, #3B71FE 0%, #0042ED 100%);
+}
+
+.card-vmware360 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card-edlight {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.card-ctat {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.card-cardstore {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+    color: #333;
+}
+
+.card-cardstore .card-tag {
+    background: rgba(0, 0, 0, 0.08);
+    color: #333;
+}
+
+.card-vynior {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.card-footprint {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #333;
+}
+
+.card-footprint .card-tag {
+    background: rgba(0, 0, 0, 0.08);
+    color: #333;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .navbar {
         padding: 20px;
     }
-    
+
     .hero-section {
         flex-direction: column;
         text-align: center;
@@ -233,5 +380,26 @@ body {
 
     .bio-desc br {
         display: none;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-desc {
+        font-size: 16px;
+    }
+
+    .half-width-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 40px 20px;
+        min-height: 300px;
+    }
+
+    .project-card h2 {
+        font-size: 28px;
     }
 }
