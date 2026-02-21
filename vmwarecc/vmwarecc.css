@@ -1,0 +1,34 @@
+/* VMware Customer Connect Specific Overrides */
+
+.vmwarecc-hero {
+    /* Since we're using an edge-to-edge image, we don't need the default gradient background */
+    background: transparent;
+}
+
+.margin-zero {
+    margin: 0 !important;
+}
+
+/* Base style overrides to inherit correctly */
+body {
+    background-color: white;
+}
+
+/* Accent colors derived from the project header */
+.vmwarecc-divider {
+    background-color: #0079ad !important;
+}
+
+.vmwarecc-bubble {
+    border: 1px solid transparent;
+}
+
+.vmwarecc-bubble:hover {
+    color: #0079ad;
+    border-color: #0079ad;
+}
+
+/* Adjust the project sticky nav to not have unnecessary space since our hero is an image */
+.project-sticky-nav-wrapper {
+    margin-top: 0;
+}

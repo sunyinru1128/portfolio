@@ -1,0 +1,59 @@
+/* Edlight Specific Overrides */
+
+.edlight-nav {
+    background-color: #ffd043 !important;
+}
+
+.edlight-hero {
+    background: #ffd043 !important;
+    /* Yellow theme instead of blue */
+    padding-bottom: 200px;
+    /* Make room for overlapping image */
+}
+
+.edlight-hero .hero-content {
+    max-width: 1000px;
+}
+
+.edlight-title {
+    font-size: 64px;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+}
+
+.hero-img {
+    margin-top: 40px;
+    margin-bottom: -220px;
+    /* Overlap the next section */
+    position: relative;
+    z-index: 10;
+}
+
+.edlight-sticky-bg {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    margin-top: 100px;
+    /* Space for the overlapping hero image */
+}
+
+.edlight-bubble {
+    border: 1px solid transparent;
+}
+
+.edlight-bubble:hover {
+    color: #ffd043;
+    border-color: #ffd043;
+}
+
+.edlight-divider {
+    background-color: #ffd043 !important;
+}
+
+.edlight-color {
+    color: #ffd043 !important;
+}
+
+/* Base style overrides to inherit correctly */
+body {
+    background-color: white;
+}

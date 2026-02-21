@@ -1,0 +1,28 @@
+/* VMware 360 Specific Overrides */
+
+.vmware360-nav {
+    margin-bottom: 0;
+}
+
+.vmware360-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Accent colors derived from the project theme */
+.vmware360-divider {
+    background-color: #667eea !important;
+}
+
+.vmware360-bubble {
+    border: 1px solid transparent;
+}
+
+.vmware360-bubble:hover {
+    color: #667eea;
+    border-color: #667eea;
+}
+
+/* Base style overrides to inherit correctly */
+body {
+    background-color: white;
+}
